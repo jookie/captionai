@@ -51,7 +51,7 @@ export default function HeroSection() {
               <h2 className="mb-1 font-medium text-lg">Original Photo</h2>
               <Image
                 alt="Dog and blue building"
-                src="/example.jpg"
+                src="public/example_drone.png"
                 className="w-96 h-96 rounded-2xl"
                 width={400}
                 height={400}
