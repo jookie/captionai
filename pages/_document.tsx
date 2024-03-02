@@ -6,15 +6,15 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <meta name="description" content="Add captions to your images." />
+          <meta name="description" content="PhotoBotCheck" />
           <meta property="og:site_name" content="" />
           <meta
             property="og:description"
             content="Add captions to your images."
           />
-          <meta property="og:title" content="CaptionAI" />
+          <meta property="og:title" content="PhotoBotCheck" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="CaptionAI" />
+          <meta name="twitter:title" content="PhotoBotCheck" />
           <meta
             name="twitter:description"
             content="Add captions to your images."
