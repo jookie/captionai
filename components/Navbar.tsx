@@ -14,7 +14,8 @@ export default function Navbar() {
           height={36}
         />
         <h1 className="sm:text-5xl text-3xl font-bold ml-2 tracking-tight text-white hover:text-white/50">
-          CaptionAI
+          {/* CaptionAI */}
+          Photo BotCheck
         </h1>
       </Link>
       <a
