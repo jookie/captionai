@@ -19,9 +19,9 @@ export default function HeroSection() {
   return (
     <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-28 mt-20">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal sm:text-7xl text-white">
-        Easily add captions to your images
+        Fact finding to your images
         <span className="relative whitespace-nowrap text-[#757fdf]">
-          <span className="relative"> using AI.</span>
+          <span className="relative"> using fact finding AI.</span>
         </span>
       </h1>
       <p className="mx-auto mt-4 md:mt-12 max-w-xl text-lg text-stone-400 leading-7">
