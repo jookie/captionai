@@ -33,7 +33,7 @@ export default function Footer() {
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
         <Link
-          href="https://jookie.github.io/captionai/"
+          href="https://twitter.com/DovPeles"
           className="group"
           target="_blank"
           rel="noreferrer"
