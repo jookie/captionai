@@ -14,12 +14,12 @@ export default function Navbar() {
           height={36}
         />
         <h1 className="sm:text-5xl text-3xl font-bold ml-2 tracking-tight text-white hover:text-white/50">
-        Photo BotCheck
+          Photo BotCheck
         </h1>
       </Link>
       <a
         className="relative overflow-hidden rounded-full bg-black px-20 sm:px-24 py-6 ring-red-500/50 ring-offset-black will-change-transform focus:outline-none focus:ring-1 focus:ring-offset-2"
-        href="https://github.com/jookie/captionai"
+        href="https://twitter.com/DovPeles"
         target="_blank"
         rel="noreferrer"
       >
