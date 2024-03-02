@@ -50,8 +50,9 @@ export default function HeroSection() {
             <div className="w-full md:w-1/2">
               <h2 className="mb-1 font-medium text-lg">Original Photo</h2>
               <Image
-                alt="Dog and blue building"
-                src="public/example_drone.png"
+                // alt="Dog and blue building"
+                // src="/example.jpg"
+                src="/example_drone.png"
                 className="w-96 h-96 rounded-2xl"
                 width={400}
                 height={400}
