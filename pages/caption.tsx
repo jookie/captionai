@@ -23,6 +23,8 @@ import va from "@vercel/analytics";
 
 import { HiOutlineClipboardDocument } from "react-icons/hi2";
 
+const tasks = useQuery(api.tasks.get);
+
 React.useLayoutEffect = React.useEffect;
 
 // Configuration for the uploader
@@ -96,8 +98,7 @@ const Home: NextPage = () => {
     />
   );
 
-  async function generateCaption( fileUrl: string )
-  {
+  async function generateCaption(fileUrl: string) {
     await new Promise((resolve) => setTimeout(resolve, 500));
     setLoading(true);
     const res = await fetch("/api/generate", {
@@ -117,8 +118,6 @@ const Home: NextPage = () => {
     setLoading(false);
   }
 
-  const tasks = useQuery(api.tasks.get);
-
   return (
     <>
       <Head>
@@ -136,7 +135,9 @@ const Home: NextPage = () => {
               Generate your caption
             </h1>
 
-             {tasks?.map(({ _id, text }) => <div key={_id}>{text}</div>)}
+            {tasks?.map(({ _id, text }) => (
+              <h1 key={_id}>{text}</h1>
+            ))}
 
             <ResizablePanel>
               <AnimatePresence>
