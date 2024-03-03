@@ -1,3 +1,7 @@
+"use client";
+import { useQuery } from "convex/react";
+import { api } from "../convex/_generated/api";
+
 import Head from "next/head";
 import Image from "next/image";
 import { NextPage } from "next";
@@ -113,6 +117,8 @@ const Home: NextPage = () => {
     setLoading(false);
   }
 
+  const tasks = useQuery(api.tasks.get);
+
   return (
     <>
       <Head>
@@ -129,6 +135,8 @@ const Home: NextPage = () => {
             <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal  sm:text-6xl mb-5 text-white">
               Generate your caption
             </h1>
+
+             {tasks?.map(({ _id, text }) => <div key={_id}>{text}</div>)}
 
             <ResizablePanel>
               <AnimatePresence>

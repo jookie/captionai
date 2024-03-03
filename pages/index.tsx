@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
 
+import ConvexClientProvider from "./api/ConvexClientProvider";
 
 const Home: NextPage = () => {
   return (
@@ -19,9 +20,11 @@ const Home: NextPage = () => {
 
       <div className="bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
-          <Navbar />
-          <HeroSection />
-          <Footer />
+          <ConvexClientProvider>
+            <Navbar />
+            <HeroSection />
+            <Footer />
+          </ConvexClientProvider>
         </div>
       </div>
     </>

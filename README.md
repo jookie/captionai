@@ -55,3 +55,5 @@ This example is powered by the following 3 services:
 - [Upload](https://upload.io) (storage)
 - [Upstash Redis](https://docs.upstash.com/redis) (Rate Limiting)
 - [Vercel](https://vercel.com) (hosting, serverless functions, analytics)
+- [convex1](https://stack.convex.dev/full-stack-chatgpt-app)
+- [convex2](https://dashboard.convex.dev/t/jookie)
