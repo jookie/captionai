@@ -1,3 +1,7 @@
+"use client";
+// import { useQuery } from "convex/react";
+// import { api } from "../convex/_generated/api";
+
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -5,6 +9,7 @@ import React, { useState } from "react";
 import { HiOutlineClipboardDocument } from "react-icons/hi2";
 
 export default function HeroSection() {
+  // const tasks = useQuery(api.tasks.get);
   const [buttonText, setButtonText] = useState("Copy");
 
   const copyToClipboard = (caption: string) => {
@@ -19,7 +24,7 @@ export default function HeroSection() {
   return (
     <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-28 mt-20">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal sm:text-7xl text-white">
-        Fact finding to your images
+        Image Fact finding
         <span className="relative whitespace-nowrap text-[#757fdf]">
           <span className="relative"> using fact finding AI.</span>
         </span>
@@ -64,6 +69,7 @@ export default function HeroSection() {
                 className="w-full h-32 p-2 text-gray-700 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring"
                 placeholder="Enter text here..."
                 value="a brown dog standing on top of a blue building"
+                // {tasks?.map(({ _id, text }) => <div key={_id}>{text}</div>)}
               />
               <button
                 className="px-4 py-2 text-white bg-[#5a5cd1] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring"

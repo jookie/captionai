@@ -1,6 +1,3 @@
-"use client";
-import { useQuery } from "convex/react";
-import { api } from "../convex/_generated/api";
 
 import Head from "next/head";
 import Image from "next/image";
@@ -22,8 +19,6 @@ import NSFWPredictor from "../utils/nsfwCheck";
 import va from "@vercel/analytics";
 
 import { HiOutlineClipboardDocument } from "react-icons/hi2";
-
-const tasks = useQuery(api.tasks.get);
 
 React.useLayoutEffect = React.useEffect;
 
@@ -129,16 +124,14 @@ const Home: NextPage = () => {
       </Head>
       <div className="bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+            
           <Navbar />
           <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
             <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal  sm:text-6xl mb-5 text-white">
               Generate your caption
             </h1>
 
-            {tasks?.map(({ _id, text }) => (
-              <h1 key={_id}>{text}</h1>
-            ))}
-
+            
             <ResizablePanel>
               <AnimatePresence>
                 <motion.div className="flex justify-between items-center w-full flex-col mt-4">
@@ -156,7 +149,7 @@ const Home: NextPage = () => {
                     <div className="flex sm:space-x-10 sm:flex-row flex-col text-white">
                       <div className="w-full md:w-1/2">
                         <h2 className="mb-1 font-medium text-lg">
-                          Original Photo
+                          News Strean
                         </h2>
                         <Image
                           alt="original photo"
