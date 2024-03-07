@@ -5,6 +5,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
+import Chat from "./chat"
 
 import { HiOutlineClipboardDocument } from "react-icons/hi2";
 
@@ -32,6 +33,9 @@ export default function HeroSection() {
       <p className="mx-auto mt-4 md:mt-12 max-w-xl text-lg text-stone-400 leading-7">
         Take your images to the next level with custom captions.
       </p>
+
+      <Chat />
+
       <div className="flex justify-center space-x-4">
         <a
           className="bg-white rounded-xl text-black font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-gray-100 border"

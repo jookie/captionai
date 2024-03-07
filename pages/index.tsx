@@ -1,3 +1,5 @@
+"use client";
+
 import Head from "next/head";
 import { NextPage } from "next";
 
@@ -6,6 +8,13 @@ import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
 
 // import ConvexClientProvider from "./api/ConvexClientProvider";
+import { ConvexProvider, ConvexReactClient } from "convex/react";
+
+// const convex = new ConvexReactClient("https://<your domain here>.convex.cloud");
+const convex = new ConvexReactClient("https://aromatic-bass-805.convex.cloud");
+
+import { AddIdentity } from "../components/convex-chatgpt/AddIdentity";
+import { Thread, UIMessage } from "../components/convex-chatgpt/Thread";
 
 const Home: NextPage = () => {
   return (
@@ -20,11 +29,11 @@ const Home: NextPage = () => {
 
       <div className="bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
-          {/* <ConvexClientProvider> */}
+          <ConvexProvider client={convex}>
             <Navbar />
             <HeroSection />
             <Footer />
-          {/* </ConvexClientProvider> */}
+          </ConvexProvider>
         </div>
       </div>
     </>
