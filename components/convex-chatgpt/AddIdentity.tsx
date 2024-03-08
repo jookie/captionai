@@ -34,7 +34,7 @@ export function AddIdentity() {
             onChange={(event) => setNewIdentityName(event.target.value)}
             placeholder="Identity Name"
           />
-          <textarea
+          <textarea className="w-full h-32 p-2 text-gray-700 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring"
             value={newIdentityInstructions}
             onChange={(event) => setNewIdentityInstructions(event.target.value)}
             placeholder="GPT3 Instructions"

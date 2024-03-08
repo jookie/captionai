@@ -8,8 +8,7 @@ import { AddIdentity } from "./convex-chatgpt/AddIdentity";
 
 import { Thread, UIMessage } from "../components/convex-chatgpt/Thread";
 
-
-import { useEffect  , useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 export default function Home() {
   const { loadMore, results, status } = usePaginatedQuery(
@@ -30,11 +29,19 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Convex Chat-GPT</h1>
-      <p>Disclaimer: Any identities here are not real. Just robots.</p>
-    
+      <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal sm:text-7xl text-white">
+        Convex Chat-GPT
+      </h1>
+      <p className="mx-auto mt-4 md:mt-12 max-w-xl text-lg text-stone-400 leading-7">
+        Disclaimer: Any identities here are not real. Just robots.
+      </p>
       {status === "CanLoadMore" && (
-        <button onClick={() => loadMore(100)}>Load More</button>
+        <button
+          className="px-4 py-2 text-white bg-[#5a5cd1] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring"
+          onClick={() => loadMore(100)}
+        >
+          Load More
+        </button>
       )}
       {messages
         .reduce<UIMessage[][]>((threads, message) => {
@@ -62,7 +69,9 @@ export default function Home() {
           <Thread messages={[]} threadId={newThreadId} />
         </>
       )}
-      <button className="x-4 py-2 text-white bg-[#5a5cd1] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring"
+
+      <button
+        className="px-4 py-2 text-white bg-[#5ad1b9] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring"
         onClick={(e) => {
           e.preventDefault();
           createThread().then(setNewThreadId);

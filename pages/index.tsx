@@ -6,16 +6,12 @@ import { NextPage } from "next";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
+import React from "react";
 
-// import ConvexClientProvider from "./api/ConvexClientProvider";
+// console.log(import.meta.env.VITE_CONVEX_URL)
 import { ConvexProvider, ConvexReactClient } from "convex/react";
-
-// const convex = new ConvexReactClient("https://<your domain here>.convex.cloud");
-const convex = new ConvexReactClient("https://aromatic-bass-805.convex.cloud");
-
-import { AddIdentity } from "../components/convex-chatgpt/AddIdentity";
-import { Thread, UIMessage } from "../components/convex-chatgpt/Thread";
-
+const VITE_CONVEX_URL = "https://aromatic-bass-805.convex.cloud"
+const convex        = new ConvexReactClient(VITE_CONVEX_URL);
 const Home: NextPage = () => {
   return (
     <>
@@ -29,11 +25,13 @@ const Home: NextPage = () => {
 
       <div className="bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+           <React.StrictMode>
           <ConvexProvider client={convex}>
             <Navbar />
             <HeroSection />
             <Footer />
-          </ConvexProvider>
+            </ConvexProvider>
+            </React.StrictMode>
         </div>
       </div>
     </>

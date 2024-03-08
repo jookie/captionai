@@ -51,11 +51,15 @@ export function Thread({
       <ul>
         {messages.map((message) => (
           <li key={message._id}>
-            <span>{message.name ?? message.author}:</span>
-            <span style={{ whiteSpace: "pre-wrap" }}>
+            <span className="relative whitespace-nowrap text-[#757fdf]">
+              {message.name ?? message.author}:
+            </span>
+            <span
+              className="relative whitespace-nowrap text-[#df758a]"
+              style={{ whiteSpace: "pre-wrap" }}>
               {message.error ? "⚠️ " + message.error : message.body ?? "..."}
             </span>
-            <span>
+            <span className="relative whitespace-nowrap text-[#710e14]">
               {new Date(
                 message.updatedAt ?? message._creationTime
               ).toLocaleTimeString()}
@@ -64,7 +68,8 @@ export function Thread({
         ))}
         {messages.length === 0 ? <li>New thread...</li> : null}
       </ul>
-      <form onSubmit={handleSendMessage}>
+      <form className="px-4 py-2 text-white bg-[#5ad1b9] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring"
+        onSubmit={handleSendMessage}>
         <select
           value={identityName}
           onChange={(e) => setIdentityName(e.target.value)}
@@ -76,11 +81,13 @@ export function Thread({
           ))}
         </select>
         <input
+          className="px-4 py-2 text-[#000] bg-[#5ad1b9] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring"
+
           value={newMessageText}
           onChange={(event) => setNewMessageText(event.target.value)}
           placeholder="Write a message…"
         />
-        <input type="submit" value="Send" disabled={!newMessageText} />
+        <input className="px-4 py-2 text-white bg-[#d15a8e] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring" type="submit" value="Send" disabled={!newMessageText} />
       </form>
     </>
   );

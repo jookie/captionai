@@ -5,7 +5,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
-import Chat from "./chat"
+import Chat from "./chat";
 
 import { HiOutlineClipboardDocument } from "react-icons/hi2";
 
