@@ -1,14 +1,11 @@
-"use client";
-
 import { api } from "../convex/_generated/api";
 import { useMutation, usePaginatedQuery } from "convex/react";
-import { Id } from "../convex/_generated/dataModel";
-
+import { useEffect, useState, useMemo } from "react";
 import { AddIdentity } from "./convex-chatgpt/AddIdentity";
 
-import { Thread, UIMessage } from "../components/convex-chatgpt/Thread";
+import { Thread, UIMessage } from "./convex-chatgpt/Thread";
 
-import { useEffect, useState, useMemo } from "react";
+import { Id } from "../convex/_generated/dataModel";
 
 export default function Home() {
   const { loadMore, results, status } = usePaginatedQuery(
@@ -29,19 +26,16 @@ export default function Home() {
 
   return (
     <main>
-      <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal sm:text-7xl text-white">
+      <h1 className="mx-auto max-w-4xl  text-5xl tracking-normal sm:text-3xl text-white">
         Convex Chat-GPT
       </h1>
-      <p className="mx-auto mt-4 md:mt-12 max-w-xl text-lg text-stone-400 leading-7">
+      <p className="mx-auto mt-1 md:mt-1 max-w-xl text-lg text-stone-400 leading-7">
         Disclaimer: Any identities here are not real. Just robots.
       </p>
       {status === "CanLoadMore" && (
         <button
-          className="px-4 py-2 text-white bg-[#5a5cd1] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring"
-          onClick={() => loadMore(100)}
-        >
-          Load More
-        </button>
+  className="px-4 py-2 text-white bg-[#cb3253] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring"         
+        onClick={() => loadMore(100)}>Load More</button>
       )}
       {messages
         .reduce<UIMessage[][]>((threads, message) => {
@@ -56,27 +50,21 @@ export default function Home() {
           return threads;
         }, [])
         .map((messages, index, threads) => (
-          <details className="relative whitespace-nowrap text-white"
+          <details
+            className="text-white"            
             key={"thread" + index}
             open={!newThreadId && index === threads.length - 1}
           >
-            <summary
-              
-              className="relative whitespace-nowrap text-white"
-            
-            >{messages[0]?.body?.substring(0, 100)}...</summary>
+            <summary>{messages[0]?.body?.substring(0, 100)}...</summary>
             <Thread messages={messages} threadId={messages[0].threadId} />
           </details>
         ))}
       {newThreadId && (
         <>
-          <Thread
-            messages={[]} threadId={newThreadId} />
+          <Thread messages={[]} threadId={newThreadId} />
         </>
       )}
-
-      <button
-        className="px-4 py-2 text-white bg-[#5ad1b9] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring"
+      <button  className="px-4 py-2 text-white bg-[#5a5cd1] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring"        
         onClick={(e) => {
           e.preventDefault();
           createThread().then(setNewThreadId);

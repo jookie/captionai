@@ -48,18 +48,18 @@ export function Thread({
   }
   return (
     <>
-      <ul>
+      <ul  className="relative text-white bg-[#5ad1b9] st">
         {messages.map((message) => (
           <li key={message._id}>
-            <span className="relative whitespace-nowrap text-[#757fdf]">
+            <span className="relative whitespace-nowrap text-white">
               {message.name ?? message.author}:
             </span>
             <span
-              className="relative whitespace-nowrap text-[#df758a]"
+              className="relative whitespace-nowrap text-white"
               style={{ whiteSpace: "pre-wrap" }}>
-              {message.error ? "⚠️ " + message.error : message.body ?? "..."}
+              {message.error ? "⚠️ " + message.error : message.body ?? "..." }
             </span>
-            <span className="relative whitespace-nowrap text-[#710e14]">
+            <span className="relative whitespace-nowrap text-white">
               {new Date(
                 message.updatedAt ?? message._creationTime
               ).toLocaleTimeString()}

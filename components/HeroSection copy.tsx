@@ -1,14 +1,10 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 
-
 import { HiOutlineClipboardDocument } from "react-icons/hi2";
 
 export default function HeroSection() {
-  // const tasks = useQuery(api.tasks.get);
   const [buttonText, setButtonText] = useState("Copy");
 
   const copyToClipboard = (caption: string) => {
@@ -23,17 +19,14 @@ export default function HeroSection() {
   return (
     <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-28 mt-20">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal sm:text-7xl text-white">
-        Image Fact finding
+        Easily add captions to your images
         <span className="relative whitespace-nowrap text-[#757fdf]">
-          <span className="relative"> using fact finding AI.</span>
+          <span className="relative"> using AI.</span>
         </span>
       </h1>
       <p className="mx-auto mt-4 md:mt-12 max-w-xl text-lg text-stone-400 leading-7">
         Take your images to the next level with custom captions.
       </p>
-
-      
-
       <div className="flex justify-center space-x-4">
         <a
           className="bg-white rounded-xl text-black font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-gray-100 border"
@@ -71,7 +64,6 @@ export default function HeroSection() {
                 className="w-full h-32 p-2 text-gray-700 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring"
                 placeholder="Enter text here..."
                 value="a brown dog standing on top of a blue building"
-                // {tasks?.map(({ _id, text }) => <div key={_id}>{text}</div>)}
               />
               <button
                 className="px-4 py-2 text-white bg-[#5a5cd1] rounded-md hover:bg-[#3f4194] focus:outline-none focus:ring"
