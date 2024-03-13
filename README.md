@@ -1,6 +1,12 @@
 # [CaptionAI](https://captionai.vercel.app/)
+Software as a Service (SaaS) Platform leveraging the capabilities of GPT (Generative Pre-trained Transformer) technology. Generate the metadata/description and text response to the validity of picture.  
 
-This project creates captions for photos using AI. 
+## 🗒️ A stract
+
+1. **Metadata/Description Generation**: The SaaS platform utilizes GPT technology to generate comprehensive metadata and descriptions for uploaded images, enhancing content understanding and discoverability [[1](https://aws.amazon.com/what-is/gpt/)].
+
+2. **Validity Assessment of Pictures**: By leveraging GPT's capabilities, the platform analyzes uploaded images to assess their validity, providing insights into whether the content is authentic, manipulated, or potentially misleading. This assessment aids users in making informed decisions based on the credibility of the visual content [[4](https://www.linkedin.com/pulse/generative-pre-trained-transformer-gpt-enterprise-akheleash-raghuram)].
+
 
 [![CaptionAI](./public/screenshot.png)](https://captionai.vercel.app/)
 
@@ -57,3 +63,7 @@ This example is powered by the following 3 services:
 - [Vercel](https://vercel.com) (hosting, serverless functions, analytics)
 - [convex1](https://stack.convex.dev/full-stack-chatgpt-app)
 - [convex2](https://dashboard.convex.dev/t/jookie)
+
+## 🌐 Sources
+1. [aws.amazon.com - What is GPT AI?](https://aws.amazon.com/what-is/gpt/)
+2. [linkedin.com - Generative Pre-trained Transformer (GPT) for Enterprise](https://www.linkedin.com/pulse/generative-pre-trained-transformer-gpt-enterprise-akheleash-raghuram)
