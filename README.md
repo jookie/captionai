@@ -7,6 +7,10 @@ Software as a Service (SaaS) Platform leveraging the capabilities of GPT (Genera
 
 2. **Validity Assessment of Pictures**: By leveraging GPT's capabilities, the platform analyzes uploaded images to assess their validity, providing insights into whether the content is authentic, manipulated, or potentially misleading. This assessment aids users in making informed decisions based on the credibility of the visual content [[4](https://www.linkedin.com/pulse/generative-pre-trained-transformer-gpt-enterprise-akheleash-raghuram)].
 
+1. **Description**: This SaaS platform harnesses the power of GPT technology, enabling users to generate human-like text and content, as well as answer questions in a conversational manner[[1](https://aws.amazon.com/what-is/gpt/)]. Users can upload images to generate metadata/descriptions and receive text responses regarding the validity of the picture.
+   
+2. **Text Response to Picture Validity**: By uploading an image, the platform employs GPT technology to analyze and assess its validity. The generated text response provides insights into the image's content, context, and potential authenticity, helping users make informed decisions about the picture's credibility and relevance.
+
 
 [![CaptionAI](./public/screenshot.png)](https://captionai.vercel.app/)
 
@@ -65,5 +69,9 @@ This example is powered by the following 3 services:
 - [convex2](https://dashboard.convex.dev/t/jookie)
 
 ## 🌐 Sources
-1. [aws.amazon.com - What is GPT AI?](https://aws.amazon.com/what-is/gpt/)
-2. [linkedin.com - Generative Pre-trained Transformer (GPT) for Enterprise](https://www.linkedin.com/pulse/generative-pre-trained-transformer-gpt-enterprise-akheleash-raghuram)
+- [aws.amazon.com - What is GPT AI?](https://aws.amazon.com/what-is/gpt/)
+- [arxiv.org - GPT (Generative Pre-trained Transformer)](https://arxiv.org/pdf/2305.10435)
+- [taskus.com - What are Generative Pre-trained Transformers (GPT)?](https://www.taskus.com/insights/what-is-gpt/)
+- [linkedin.com - Generative Pre-trained Transformer (GPT) for Enterprise](https://www.linkedin.com/pulse/generative-pre-trained-transformer-gpt-enterprise-akheleash-raghuram)
+- [mdpi.com - Generative Pre-Trained Transformer (GPT) in Research](https://www.mdpi.com/2078-2489/15/2/99)
+- [leewayhertz.com - How to build a generative AI solution?](https://www.leewayhertz.com/how-to-build-a-generative-ai-solution/)
