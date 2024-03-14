@@ -10,6 +10,8 @@ import { Thread, UIMessage } from "../components/convex-chatgpt/Thread";
 
 import { useEffect, useState, useMemo } from "react";
 
+import "./index.css";
+
 export default function Home() {
   const { loadMore, results, status } = usePaginatedQuery(
     api.messages.list,

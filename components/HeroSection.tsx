@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 
-
 import { HiOutlineClipboardDocument } from "react-icons/hi2";
 
 export default function HeroSection() {

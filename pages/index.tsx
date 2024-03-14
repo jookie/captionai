@@ -9,12 +9,28 @@ import Footer from "../components/Footer";
 import React from "react";
 import Chat from "../components/chat0";
 
+
 // console.log(import.meta.env.VITE_CONVEX_URL)
 import { ConvexProvider, ConvexReactClient } from "convex/react";
-
-const VITE_CONVEX_URL = "https://aromatic-bass-805.convex.cloud";
-
+const VITE_CONVEX_URL = "https://aromatic-bass-805.convex.cloud"
 const convex = new ConvexReactClient(VITE_CONVEX_URL);
+// const apiKey = process.env.OPENAI_API_KEY!;
+// const OrganizationID = process.env.OPENAI_API_ORG_ID;
+// if (!apiKey) {
+//   throw new Error(
+//     "Missing OPENAI_API_KEY in environment variables.\n" +
+//     "Set it in the project settings in the Convex dashboard:\n" +
+//     "    npx convex dashboard\n or https://dashboard.convex.dev"
+//   );
+// }
+
+// import dotenv from 'dotenv';
+// dotenv.config();
+// const convexUrl = process.env.VITE_CONVEX_URL;
+// if (!convexUrl) {
+// throw new Error("VITE_CONVEX_URL is not defined in the environment variables.");
+// Now you can use 'convexUrl' in your application
+// console.log("Convex URL:", convexUrl);
 const Home: NextPage = () => {
   return (
     <>
@@ -28,14 +44,16 @@ const Home: NextPage = () => {
 
       <div className="bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
-          <React.StrictMode>
+           <React.StrictMode>
             <ConvexProvider client={convex}>
               <Navbar />
               <Chat />
-              <HeroSection />
-              <Footer />
+              
+              
+            <HeroSection />
+            <Footer />
             </ConvexProvider>
-          </React.StrictMode>
+            </React.StrictMode>
         </div>
       </div>
     </>
